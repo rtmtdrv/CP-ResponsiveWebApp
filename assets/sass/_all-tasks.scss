@@ -47,6 +47,37 @@
     }
     .content-area {
         color: red;
+        width: 100%;
+        .tasks-container {
+            margin: 40px 0;
+            .task-box {
+                padding: 20px;
+                border-bottom: 2px solid #d1d1d1;
+                background: white;
+                margin: 20px 0 20px 0;
+                position: relative;
+                .title {
+                    color: black;
+                    font-size: 24px;
+                    margin: 0 0 15px 0;
+                }
+                .date {
+                    color: #ababab;
+                    font-size: 14px;
+                }
+                .check-box {
+                    padding: 5px;
+                    border-radius: 10px;
+                    border: 3px solid $darkBlue;
+                    color: $darkBlue;
+                    display: inline-block;
+                    position: absolute;
+                    top: 25px;
+                    right: 25px;
+                    font-size: 32px;
+                }
+            }
+        }
     }
 }
 
@@ -55,5 +86,4 @@
     width: 100%;
     max-width: 1200px;;
     margin: 0 auto;
-    background: blue;
 }
