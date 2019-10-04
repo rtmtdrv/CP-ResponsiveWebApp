@@ -1,4 +1,5 @@
 #all-tasks {
+    height: 100%;;
     .header {
         background: url("https://static.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg") center center;
         background-repeat: no-repeat;
@@ -48,6 +49,8 @@
     .content-area {
         color: red;
         width: 100%;
+        overflow: auto;
+        
         .tasks-container {
             margin: 40px 0;
             .task-box {
@@ -79,6 +82,83 @@
             }
         }
     }
+    .task-form {
+        background: $darkBlue;
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        color: $white;
+        padding: 50px 0;
+        transform: translate(0, 100%);
+        transition: all .6s ease-in-out;
+
+        &.active {
+            display: block;
+            transform: translate(0, 0);
+            
+        }
+        .close-btn {
+            position: absolute;
+            right: 35px;
+            top: 35zpx;
+            cursor: pointer;
+            padding: 15px;
+            .fa {
+                font-size: 36px;
+            }
+        }
+        form {
+            display: block;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        h3 {
+            margin: 50px 0;
+            font-size: 36px;
+            text-align: center;
+            font-weight: 100;
+
+        }
+        label {
+            // font-family: "Roboto", cursive;
+            font-weight: 300;
+            font-size: 24px;
+            display: block;
+            text-transform: capitalize;
+            margin: 0 0 15px 0;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            background: rgba(255,255,255, .05);
+            border: 0;
+            border-bottom: 1px solid rgba(255,255,255, .7);
+            font-weight: 300;
+            font-size: 36px;
+            color: white;
+            &:focus {
+                border: none;
+                outline: none;
+            }
+        }
+        textarea {
+            height: 250px;;
+        }
+        button {
+            background: $lightBlue;
+            padding: 15px 20px;
+            width: 100%;
+            border: none;
+            color: $white;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+    }
 }
 
 .container {
@@ -86,4 +166,6 @@
     width: 100%;
     max-width: 1200px;;
     margin: 0 auto;
+    padding: 0 15px;
+
 }
