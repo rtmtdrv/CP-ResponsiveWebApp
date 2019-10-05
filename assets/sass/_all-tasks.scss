@@ -184,13 +184,76 @@
 //tablets
 @media screen and (max-width: 1199px) {
     #all-tasks {
-            background-color: red;
+            // background-color: red;
         }
     }
 
 //phones
 @media screen and (max-width: 767px) {
-    #all-tasks {
-            background-color: lightgreen;
+        #all-tasks {
+            .header {
+                .add-circle {
+                    top:111px; 
+                }
+                .top {
+                    .tasks-total {
+                        top: 0;
+                        .task {
+                            .number {
+                                color: #9787EE;
+                                font-weight: 500;
+                                font-size: 24px;
+                                margin: 0 10px 0 0;
+                                position: relative;
+                                top: 3px;
+                            }
+                        }
+                    }
+                }
+            }
+            .content-area {
+                height: 82%;
+            }
+        }
+    }
+
+//extra small phones
+    @media screen and (max-width: 353px) {
+        #all-tasks {
+            .header {
+                .add-circle {
+                    top:140px; 
+                }
+                .top {
+                    .logo {
+                        float: none;
+                        text-align: center;
+                        margin: 0 0 15px 0;
+
+                    }
+                    .tasks-total {
+                        text-align: center;
+                        top: 0;
+                        .task {
+                            display: inline-block;
+                            .number {
+                                color: #9787EE;
+                                font-weight: 500;
+                                font-size: 24px;
+                                margin: 0 10px 0 0;
+                                position: relative;
+                                top: 3px;
+                            }
+                        }
+                    }
+                }
+            }
+            .content-area {
+                height: 72%;
+            }
+
+            .task-form {
+                top: -50px;
+            }
         }
     }
